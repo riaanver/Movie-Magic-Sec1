@@ -1,0 +1,32 @@
+# Python
+backend/venv/
+backend/__pycache__/
+*.pyc
+.env
+**/.env
+
+# Node
+node_modules/
+**/node_modules/
+dist/
+build/
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swpi
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Logs
+*.log
+npm-debug.log*
+
+.env
+**/.env
