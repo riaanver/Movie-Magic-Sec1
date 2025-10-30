@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from models import ChatMessage
-from services.tmdb_service import get_popular_movie, get_search_movie, get_upcoming_movie, get_similar_movie, get_recommendation_movie
+from services.tmdb_service import (get_popular_movie, get_search_movie, get_upcoming_movie,
+                                   get_similar_movie, get_recommendation_movie, get_actor_movie_credits, get_movie_credit)
 
 app = FastAPI()
 
@@ -34,6 +35,12 @@ async def recommendation_movie(movie_id: int, page: int = 1):
     result = await get_recommendation_movie(movie_id, page)
     return result
 
+@app.get("/person/{actor_id}/movie_credits")
+async def actor_credit(actor_id: int):
+    result = await get_actor_movie_credits(actor_id)
+    return result
 
-
-
+@app.get("/movie/{movie_id}/credits")
+async def movie_credit(movie_id: int):
+    result = await get_movie_credit(movie_id)
+    return result
