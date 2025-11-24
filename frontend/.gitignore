@@ -1,0 +1,17 @@
+# Next.js
+.next
+out
+
+# dependencies
+node_modules
+
+# testing
+coverage
+
+# misc
+.DS_Store
+*.log
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
